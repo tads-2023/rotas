@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotas</title>
+</head>
+<body>
+    <button id="ir-rosa">Ir para Rosa</button>
+    <button id="ir-verde">Ir para Verde</button>
+    <div id="aplicacao">
+
+    </div>
+
+    
+
+    <script src="src/controllers/RosaController.js"></script>
+    <script src="src/controllers/VerdeController.js"></script>
+    <script src="src/views/RosaView.js"></script>
+    <script src="src/views/VerdeView.js"></script>
+    <script src="src/router.js"></script>
+  <script>
+    const rosa = document.querySelector("#ir-rosa")
+    const verde = document.querySelector("#ir-verde")
+
+    rosa.addEventListener("click", () => {
+       new Router().goTo("rosa");
+    })
+
+    verde.addEventListener("click", () => {
+        new Router().goTo("verde");
+    })
+  </script>
+</body>
+</html>
